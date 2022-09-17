@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pacman
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: pacman
+    repoURL: 'https://github.com/Ognian/k8s_ws_demo'
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+        - test-values.yaml
+  project: default
