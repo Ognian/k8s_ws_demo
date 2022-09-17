@@ -11,7 +11,7 @@ spec:
     path: pacman
     repoURL: 'https://github.com/Ognian/k8s_ws_demo'
     targetRevision: HEAD
-  helm:
+    helm:
      valueFiles:
        - values.yaml
 #        - test-values.yaml
